@@ -1,0 +1,351 @@
+/* FLEX */
+
+.flex{
+    display: flex;
+}
+.flexWrap{
+    flex-wrap: wrap;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+    flex-direction: row;
+}
+.flexCenter{
+    display: flex;
+    justify-content: center;
+}
+.flexSpaceAroundRow{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* ALLINEAMENTI */
+
+.alignItemsCenter{
+    align-items: center;
+}
+.textAlignCenter{
+    text-align: center;
+}
+.spaceAround{
+    justify-content: space-around;
+}
+
+/* LINE-HEIGHT */
+
+.lineHeightTitleH{
+    line-height: 50px;
+}
+.lineHeightTitleF{
+    line-height: 75px;
+}
+
+/* HEIGHT E WIDTH */
+
+.widthHeader{
+    width: 17%
+}
+.fullHeight{
+    height: 100%;
+}
+.fullHeightVH{
+    height: 100vh;
+}
+.fullWidth{
+    width: 100%;
+}
+
+/* BODY */
+
+.body{
+    position: relative;
+	top: 70px;
+	padding-bottom: 350px;
+}
+
+/* FOOTER */
+
+.footer{
+        position: absolute;
+        bottom: 0px ;
+        width: 100%;
+        height: 500px;
+        background-color: #282A28;
+        display: grid;
+        grid-template-rows: 150px 200px 30px;
+        row-gap: 50px;
+        z-index: 2;
+}
+
+/* GRID */
+
+.grid{
+    display: grid;
+}
+.gridSquare{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.gridFirstRFirstC{
+    grid-area: 1 / 1 / 1 / 1;
+}
+.gridFirstRSecondC{
+    grid-area: 1 / 2 / 1 / 2;
+}
+.gridFirstRThirdC{
+    grid-area: 1 / 3 / 1 / 3;
+}
+.gridSecondRFirstC{
+    grid-area: 2 / 1 / 2 / 1;
+}
+.gridSecondRSecondC{
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+/* COLORS */
+.white{
+    color: white;
+}
+
+/* IMMAGINI */
+
+.imgContain{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.imgContainFull{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.contain{
+    object-fit: contain;
+}
+
+/* RESETTA BOTTONI */
+
+.resetButton{
+    background-color: transparent;
+    border: 0;
+}
+
+/* BOTTONI FOOTER */
+
+.btn-enanced{
+    border: groove #337FED 3px;
+    background: #241ED0;
+    background-image: -webkit-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -o-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -webkit-gradient(to bottom, #241ED0, #3D94F6);
+    text-decoration: none;
+}
+
+/* BOTTONI RIMUOVI CARRELLO */
+
+
+.btnRemove{
+    font-size: 12px;
+    text-decoration: underline;
+    color: orange;
+}
+
+/* BOTTONI SCHEDE */
+
+.buttonSchede{
+    background: #7F3DF6;
+    background-image: -webkit-linear-gradient(top, #7F3DF6, #3DF6CB);
+    background-image: -moz-linear-gradient(top, #7F3DF6, #3DF6CB);
+    background-image: -ms-linear-gradient(top, #7F3DF6, #3DF6CB);
+    background-image: -o-linear-gradient(top, #7F3DF6, #3DF6CB);
+    background-image: -webkit-gradient(to bottom, #7F3DF6, #3DF6CB);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    height: 0;
+    line-height: 0;
+    color: #FFAE00;
+    font-family: Times New Roman;
+    width: 150px;
+    font-size: 23px;
+    padding: 15px;
+    -webkit-box-shadow: -6px -6px 11px 0 #99C624;
+    -moz-box-shadow: -6px -6px 11px 0 #99C624;
+    box-shadow: -6px -6px 11px 0 #99C624;
+    text-shadow: -5px 5px 15px #000000;
+    border: groove #0059A0 3px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+.buttonSchede:hover{
+    border: groove #337FED 3px;
+    background: #241ED0;
+    background-image: -webkit-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -moz-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -ms-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -o-linear-gradient(top, #241ED0, #3D94F6);
+    background-image: -webkit-gradient(to bottom, #241ED0, #3D94F6);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+/* BOTTONI WRAPPER SCHEDE RICETTE */
+
+.pulse {
+    --hover: red;
+}
+.pulse:hover{
+    animation: pulse 1.5s;
+    box-shadow: 0 0 0 2em transparent;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+.btnSchedeRicette {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+.btnSchedeRicette:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+    }
+
+.btnSchedeRicette:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* TESTO */
+
+.removeTextDec{
+    text-decoration: none;
+}
+.underline{
+    text-decoration: underline;
+}
+.Lato{
+    font-family: 'Lato', sans-serif;
+}
+.RobotoSlab{
+    font-family: 'Roboto Slab', serif;
+}
+.SpecialElite{
+    font-family: 'Special Elite', cursive;
+}
+
+/* POSITION */
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.hide{
+    display: none;
+}
+
+/* NASCONDI HEADER */
+
+.showH{
+    transform: translateY(0%);
+}
+.hideH{
+    transform:translateY(-100%);
+}
+
+/* TITOLO */
+
+.title{
+    margin: 0;
+    color:white;
+}
+.backgroundButtonH{
+    background-color: white;
+}
+
+/* BORDI */
+
+.esterno{
+    border-right: 1px solid black;
+}
+
+/* EMAILFORM */
+
+.EmailForm{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: #282A28;
+    z-index: 3;
+}
+
+/* CART */
+
+.backgroundCart{
+    background-color: white;
+}
