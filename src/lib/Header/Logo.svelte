@@ -3,11 +3,13 @@
     import {getContext} from 'svelte';
 
     let Logo = getContext('Logo');
+    export let width = 0;
+    export let height = 0;
 </script>
 
 <video 
-        width="100" 
-        height="100" 
+        width={width}
+        height={height}
         loop 
         autoplay 
         muted 

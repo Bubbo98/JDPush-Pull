@@ -5,7 +5,7 @@
 </script>
 
 <div>
-    <ul>
+    <ul class='Nanum'>
         {#each $listaAttrezzi[index] as Attrezzo}
             <li>{Attrezzo}</li>
         {/each}

@@ -42,7 +42,7 @@
 <style>
     body{
 		position: relative;
-		top: 40px;
+		top: 60px;
 		padding-bottom: 300px;
 	}
     button {
@@ -57,9 +57,9 @@
         border-radius: 25px;
         height: 0;
         line-height: 0;
-        color: #FFAE00;
+        color: black;
         font-family: Times New Roman;
-        width: 450px;
+        width: 600px;
         font-size: 40px;
         font-weight: 100;
         padding: 27px;
@@ -95,7 +95,7 @@
     }
     .container{
         display: flex;
-        width:450px;
+        width:600px;
         flex-wrap: wrap;
     }
 </style>

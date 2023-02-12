@@ -3,6 +3,14 @@
     /** @type {import('./$types').LayoutLoad} */
     import {getContext} from 'svelte';
 
+    $: console.log(localStorage.getItem(0))
+
+    // for(let i = 0; i < localStorage.length; i++){
+    //     if (localStorage.getItem(pocketbase_auth)){
+    //     $cart.push(JSON.parse(localStorage.getItem(i)));
+    //     }
+    // }
+
     let ArrowLeft = getContext('ArrowLeft');
     let ArrowRight = getContext('ArrowRight');
 

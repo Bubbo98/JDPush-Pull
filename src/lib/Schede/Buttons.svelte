@@ -76,6 +76,6 @@
 
 </script>
 
-<button class = 'buttonSchede' on:click={() => {addToCart(1)}}>Mensile</button>
-<button class = 'buttonSchede' on:click={() => {addToCart(2)}}>Bimestrale</button>
-<button class = 'buttonSchede' on:click={() => {addToCart(3)}}>Trimestrale</button>
+<button class = 'buttonSchede' on:click={() => {addToCart(1)}}>Mensile 30€</button>
+<button class = 'buttonSchede' on:click={() => {addToCart(2)}}>Trimestrale 80€</button>
+<button class = 'buttonSchede' on:click={() => {addToCart(3)}}>Semestrale 150€</button>

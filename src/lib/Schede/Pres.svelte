@@ -63,7 +63,7 @@
 </script>
 <div class='flexCenter alignItemsCenter'>
     <div class='fullHeight fullWidth'> 
-        <h1 class='textAlignCenter'>{$title[$indexPres]}</h1>
+        <h1 class='Kanit textAlignCenter'>{$title[$indexPres]}</h1>
         <p class='prinAvan underline Lato'>{$prinAvan[$indexPA]}</p>
         <p class='Lato'>Qui di seguito riportato, troverai il necessario per svolgere questa versione:</p>
             <p class='Lato'>JD push & pull è un marchio per chiunque voglia cominciare il suo percorso fitness.Le sessioni di allenamento vanno dai 40 ai 60 minuti e si basano sullo svolgimento di diversi circuiti che hanno l’obiettivo di allenare tutto il corpo.</p>

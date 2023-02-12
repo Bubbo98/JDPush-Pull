@@ -63,7 +63,7 @@
 
 .body{
     position: relative;
-	top: 70px;
+	top: 90px;
 	padding-bottom: 350px;
 }
 
@@ -73,10 +73,10 @@
         position: absolute;
         bottom: 0px ;
         width: 100%;
-        height: 500px;
+        height: 400px;
         background-color: #282A28;
         display: grid;
-        grid-template-rows: 150px 200px 30px;
+        grid-template-rows: 300px 30px;
         row-gap: 50px;
         z-index: 2;
 }
@@ -170,9 +170,9 @@
     border-radius: 25px;
     height: 0;
     line-height: 0;
-    color: #FFAE00;
+    color: black;
     font-family: Times New Roman;
-    width: 150px;
+    width: 200px;
     font-size: 23px;
     padding: 15px;
     -webkit-box-shadow: -6px -6px 11px 0 #99C624;
@@ -294,6 +294,13 @@
 .SpecialElite{
     font-family: 'Special Elite', cursive;
 }
+.Nanum{
+    font-family: 'Nanum Myeongjo', serif;
+}
+.Kanit{
+    font-family: 'Kanit', sans-serif;
+    font-size: 50px;
+}
 
 /* POSITION */
 
@@ -318,12 +325,8 @@
 
 /* TITOLO */
 
-.title{
-    margin: 0;
-    color:white;
-}
 .backgroundButtonH{
-    background-color: white;
+    background-color: #282A28;
 }
 
 /* BORDI */

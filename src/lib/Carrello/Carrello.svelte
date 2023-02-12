@@ -43,6 +43,7 @@
     }
 
     $: total = $cart.reduce((sum, item) => sum + item.price * item.Q, 0);
+    $: console.log($cart.length)
 </script>
     <div class="backgroundCart">
     {#each $cart as item }
@@ -64,7 +65,12 @@
     </div>
     {#if $cart.length >= 1}
         <div >
-            <button on:click={() => openInNewTab('/Carrello')} class='resetButton'><button>Vai al Pagamento</button></button>
+            <button on:click={() => {
+                for(let i = 0; i < $cart.length; i++){ 
+                    localStorage.setItem(i, JSON.stringify($cart[i]))
+                    }
+                openInNewTab('/Carrello')
+                }} class='resetButton'><button>Vai al Pagamento</button></button>
         </div>
     {/if}
 </div>

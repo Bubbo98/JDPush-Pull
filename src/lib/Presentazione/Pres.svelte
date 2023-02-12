@@ -11,7 +11,7 @@
         <div class='testo textAlignCenter relative lineHeightTitleH SpecialElite'>
             <h1>
             Siamo una coppia fitness che ha pensato alle esigenze di tutti.
-            Chi ha poco tempo, chi non sa dove partire o semplicemente per chi ha voglia di allenarsi ma non ha una guida.
+            Chi ha poco tempo, chi non sa da dove partire o semplicemente per chi ha voglia di allenarsi ma non ha una guida.
             Ricerchiamo benessere e soddisfazione personale.
             Scegliete la vostra categoria per impostare la vostra scheda e "Push & Pull"!
             </h1>

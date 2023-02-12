@@ -30,7 +30,7 @@
         <Carrello />
     </div>
 {:else}
-    <div class='show  absolute fullHeightVH backgroundButtonH'>
+    <div class='show absolute fullHeightVH backgroundButtonH'>
         <Carrello />
     </div>
 {/if}
@@ -48,9 +48,10 @@
 
 <style>
     div{
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         border: 0;
+        margin-right: 10px;
     }
     .show{
         top: 100px;
