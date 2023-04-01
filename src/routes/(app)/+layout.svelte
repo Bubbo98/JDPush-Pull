@@ -80,96 +80,88 @@
   }
 </script>
 
-<main>
-  <header>
-    <VanishingHeader duration="250ms" offset={50} tolerance={5}>
-      <div class="widthHeader">
-        <Logo width="130" height="130" />
-      </div>
-      <div class="fullHeight lineHeightTitleH textAlignCenter titleH">
-        <Title />
-      </div>
-      <div class="flexSpaceAroundRow alignItemsCenter widthHeader fullHeight">
-        <Buttons />
-      </div>
-    </VanishingHeader>
-  </header>
-  <slot />
-  <footer>
-    <div class="footer">
-      <div class="firstRow">
-        <div class="flexColumn item textAlignCenter fullHeight">
-          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-          <span
-            class="flexCenter fullWidth fullHeight alignItemsCenter flex"
-            on:mouseover={() => handleOver("E")}
-            on:mouseout={() => handleOut("E")}
-            ><img src={data.Email} class="imgContain" alt="E-mail" /></span
-          >
-          <!-- svelte-ignore a11y-click-events-have-key-events -->
-          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-          <div
-            class="fullWidth fullHeight flex alignItemsCenter"
-            on:mouseover={() => handleOver("E")}
-            on:mouseout={() => handleOut("E")}
-            on:click={handleClick}
-          >
-            <img src={data.JDpushandpull} class={btnEmail} alt="" />
-          </div>
-          {#if btnClick}
-            <div class="EmailForm">
-              <EmailForm on:close={handleClickClose} />
-            </div>
-          {/if}
-        </div>
-        <div class="titleF item lineHeightTitleF textAlignCenter">
-          <Logo width="300" height="300" />
-        </div>
+<div class="allBody">
+  <VanishingHeader duration="250ms" offset={50} tolerance={5}>
+    <div class="widthHeader">
+      <Logo width="130" height="130" />
+    </div>
+    <div class="fullHeight lineHeightTitleH textAlignCenter titleH">
+      <Title />
+    </div>
+    <div class="flexSpaceAroundRow alignItemsCenter widthHeader fullHeight">
+      <Buttons />
+    </div>
+  </VanishingHeader>
 
-        <div class="item grid textAlignCenter alignItemsCenter gridSquare">
-          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-          <span
-            class="flexCenter c"
-            on:mouseover={() => handleOver("I")}
-            on:mouseout={() => handleOut("I")}
-            ><img
-              src={data.Instagram}
-              class="imgContain"
-              alt="Instagram"
-            /></span
-          >
-          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-          <button
-            on:mouseover={() => handleOver("J")}
-            on:mouseout={() => handleOut("J")}
-            on:click={() =>
-              openInNewTab(
-                "https://instagram.com/mauriziojoshuapt?igshid=YmMyMTA2M2Y="
-              )}
-            class="gridSecondRFirstC resetButton"
-            ><img src={data.Joshua} class={btnInstaJ} alt="" /></button
-          >
-          <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-          <button
-            on:mouseover={() => handleOver("D")}
-            on:mouseout={() => handleOut("D")}
-            on:click={() =>
-              openInNewTab(
-                "https://instagram.com/lamendye?igshid=YmMyMTA2M2Y="
-              )}
-            class="gridSecondRSecondC resetButton"
-            ><img src={data.Denise} class={btnInstaD} alt="" /></button
-          >
-        </div>
-      </div>
-      <div class="info white textAlignCenter">
+  <slot />
+
+  <div class="footer">
+    <div class="firstRow">
+      <div class="flexColumn item textAlignCenter fullHeight">
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <span
-          >P.IVA: 12717010966 - Sede Legale: Largo Camillo Caccia Dominioni 3
-        </span>
+          class="flexCenter fullWidth fullHeight alignItemsCenter flex"
+          on:mouseover={() => handleOver("E")}
+          on:mouseout={() => handleOut("E")}
+          ><img src={data.Email} class="imgContain" alt="E-mail" /></span
+        >
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <div
+          class="fullWidth fullHeight flex alignItemsCenter"
+          on:mouseover={() => handleOver("E")}
+          on:mouseout={() => handleOut("E")}
+          on:click={handleClick}
+        >
+          <img src={data.JDpushandpull} class={btnEmail} alt="" />
+        </div>
+        {#if btnClick}
+          <div class="EmailForm">
+            <EmailForm on:close={handleClickClose} />
+          </div>
+        {/if}
+      </div>
+      <div class="titleF item lineHeightTitleF textAlignCenter">
+        <Logo width="300" height="300" />
+      </div>
+
+      <div class="item grid textAlignCenter alignItemsCenter gridSquare">
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <span
+          class="flexCenter c"
+          on:mouseover={() => handleOver("I")}
+          on:mouseout={() => handleOut("I")}
+          ><img src={data.Instagram} class="imgContain" alt="Instagram" /></span
+        >
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <button
+          on:mouseover={() => handleOver("J")}
+          on:mouseout={() => handleOut("J")}
+          on:click={() =>
+            openInNewTab(
+              "https://instagram.com/mauriziojoshuapt?igshid=YmMyMTA2M2Y="
+            )}
+          class="gridSecondRFirstC resetButton"
+          ><img src={data.Joshua} class={btnInstaJ} alt="" /></button
+        >
+        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+        <button
+          on:mouseover={() => handleOver("D")}
+          on:mouseout={() => handleOut("D")}
+          on:click={() =>
+            openInNewTab("https://instagram.com/lamendye?igshid=YmMyMTA2M2Y=")}
+          class="gridSecondRSecondC resetButton"
+          ><img src={data.Denise} class={btnInstaD} alt="" /></button
+        >
       </div>
     </div>
-  </footer>
-</main>
+    <div class="info white textAlignCenter">
+      <span
+        >P.IVA: 12717010966 - Sede Legale: Largo Camillo Caccia Dominioni 3
+      </span>
+    </div>
+  </div>
+</div>
 
 <style>
   .titleH {
@@ -202,5 +194,10 @@
   .item {
     flex: 1 1 0px;
     width: 0;
+  }
+  .allBody {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
   }
 </style>

@@ -63,14 +63,14 @@
 
 .body{
     position: relative;
-	top: 90px;
-	padding-bottom: 350px;
+	top: 12rem;
+	padding-bottom: 400px;
 }
 
 /* FOOTER */
 
 .footer{
-        position: absolute;
+        position: relative;
         bottom: 0px ;
         width: 100%;
         height: 400px;
@@ -351,4 +351,14 @@
 
 .backgroundCart{
     background-color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+}
+html{
+    height: max-content;
 }

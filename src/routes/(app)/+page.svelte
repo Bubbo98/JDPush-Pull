@@ -4,8 +4,8 @@
   import Gallery from "$lib/Gallery/Gallery.svelte";
 </script>
 
-<body class="body">
+<div class="body">
   <Pres />
   <Body />
   <Gallery />
-</body>
+</div>
