@@ -33,8 +33,12 @@ declare module '$env/static/private' {
 	export const CommonProgramW6432: string;
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
+	export const configsetroot: string;
 	export const DriverData: string;
 	export const EDITOR: string;
+	export const EFC_8984: string;
+	export const FPS_BROWSER_APP_PROFILE_STRING: string;
+	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
@@ -66,10 +70,7 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const NPM_PREFIX_NPM_CLI_JS: string;
 	export const NUMBER_OF_PROCESSORS: string;
-	export const NVM_HOME: string;
-	export const NVM_SYMLINK: string;
 	export const OneDrive: string;
-	export const OneDriveConsumer: string;
 	export const OS: string;
 	export const Path: string;
 	export const PATHEXT: string;
@@ -130,8 +131,12 @@ declare module '$env/dynamic/private' {
 		CommonProgramW6432: string;
 		COMPUTERNAME: string;
 		ComSpec: string;
+		configsetroot: string;
 		DriverData: string;
 		EDITOR: string;
+		EFC_8984: string;
+		FPS_BROWSER_APP_PROFILE_STRING: string;
+		FPS_BROWSER_USER_PROFILE_STRING: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
@@ -163,10 +168,7 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		NPM_PREFIX_NPM_CLI_JS: string;
 		NUMBER_OF_PROCESSORS: string;
-		NVM_HOME: string;
-		NVM_SYMLINK: string;
 		OneDrive: string;
-		OneDriveConsumer: string;
 		OS: string;
 		Path: string;
 		PATHEXT: string;
