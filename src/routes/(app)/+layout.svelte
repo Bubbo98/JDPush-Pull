@@ -40,7 +40,7 @@
   setContext("TitleSecondi", data.TitleSecondi);
   setContext("TitleDolci", data.TitleDolci);
 
-  let btnEmail = "fullWidth marginLeft";
+  let btnEmail = "fullWidth";
   let btnInstaJ = "Scritta";
   let btnInstaD = "Scritta";
   let btnClick = false;
@@ -53,7 +53,7 @@
       btnInstaJ = "btn-enanced Scritta";
       btnInstaD = "btn-enanced Scritta";
     } else if (e === "E") {
-      btnEmail = "btn-enanced fullWidth marginLeft";
+      btnEmail = "btn-enanced fullWidth";
     } else if (e === "D") {
       btnInstaD = "btn-enanced Scritta";
     } else if (e === "J") {
@@ -65,7 +65,7 @@
       btnInstaJ = "Scritta";
       btnInstaD = "Scritta";
     } else if (e === "E") {
-      btnEmail = "fullWidth marginLeft";
+      btnEmail = "fullWidth";
     } else if (e === "D") {
       btnInstaD = "Scritta";
     } else if (e === "J") {
@@ -85,7 +85,9 @@
     <div class="widthHeader">
       <Logo width="130" height="130" />
     </div>
-    <div class="fullHeight lineHeightTitleH textAlignCenter titleH">
+    <div
+      class="fullHeight lineHeightTitleH flex items-center justify-center textAlignCenter titleH"
+    >
       <Title />
     </div>
     <div class="flexSpaceAroundRow alignItemsCenter widthHeader fullHeight">
@@ -95,7 +97,7 @@
 
   <slot />
 
-  <div class="footer">
+  <div class="footer px-3">
     <div class="firstRow">
       <div class="flexColumn item textAlignCenter fullHeight">
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -108,7 +110,7 @@
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
         <div
-          class="fullWidth fullHeight flex alignItemsCenter"
+          class="fullWidth fullHeight justify-center flex items-center"
           on:mouseover={() => handleOver("E")}
           on:mouseout={() => handleOut("E")}
           on:click={handleClick}
@@ -121,7 +123,9 @@
           </div>
         {/if}
       </div>
-      <div class="titleF item lineHeightTitleF textAlignCenter">
+      <div
+        class="titleF item lineHeightTitleF justify-center flex items-center"
+      >
         <Logo width="300" height="300" />
       </div>
 
@@ -141,7 +145,7 @@
             openInNewTab(
               "https://instagram.com/mauriziojoshuapt?igshid=YmMyMTA2M2Y="
             )}
-          class="gridSecondRFirstC resetButton"
+          class="gridSecondRFirstC resetButton justify-center flex items-center"
           ><img src={data.Joshua} class={btnInstaJ} alt="" /></button
         >
         <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -150,7 +154,7 @@
           on:mouseout={() => handleOut("D")}
           on:click={() =>
             openInNewTab("https://instagram.com/lamendye?igshid=YmMyMTA2M2Y=")}
-          class="gridSecondRSecondC resetButton"
+          class="gridSecondRSecondC resetButton justify-center flex items-center"
           ><img src={data.Denise} class={btnInstaD} alt="" /></button
         >
       </div>

@@ -1,4 +1,4 @@
-<div class="bodyAuth">
+<div class="bodyAuth relative">
   <div class="background">
     <div class="shape" />
     <div class="shape" />
