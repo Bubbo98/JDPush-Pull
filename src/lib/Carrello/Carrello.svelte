@@ -1,5 +1,6 @@
 <script>
   import { cart } from "./cartStore.js";
+  import { goto } from "$app/navigation";
   /** @type {import('./$types').LayoutLoad} */
   import { getContext } from "svelte";
 
@@ -7,7 +8,7 @@
   let ArrowDown = getContext("ArrowDown");
 
   function openInNewTab(url) {
-    window.open(url, "_blank").focus();
+    window.open(url);
   }
   function removeFromCart(product) {
     $cart = $cart.filter((value) => {
@@ -98,7 +99,7 @@
           for (let i = 0; i < $cart.length; i++) {
             localStorage.setItem(i, JSON.stringify($cart[i]));
           }
-          openInNewTab("/Carrello");
+          goto("/Carrello");
         }}
         class="resetButton"><button>Vai al Pagamento</button></button
       >

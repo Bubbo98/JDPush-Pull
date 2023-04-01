@@ -4,43 +4,53 @@
     <div class="shape" />
   </div>
   <form action="?/register" method="POST">
-    <h2>Registrati</h2>
-    <p>Oppure <a href="/Login">fai il login</a></p>
-    <div>
-      <label for="name">
-        <span>Nome</span>
-      </label>
-      <input type="text" name="name" placeholder="Username" />
-    </div>
-    <div>
-      <label for="email">
-        <span>E-mail</span>
-      </label>
-      <input type="text" name="email" placeholder="Email" />
-    </div>
-    <div>
-      <label for="password">
-        <span>Password</span>
-      </label>
-      <input type="password" name="password" placeholder="Password" />
-    </div>
-    <div>
-      <label for="passwordConfirm">
-        <span>Conferma Password</span>
-      </label>
-      <input
-        type="password"
-        name="passwordConfirm"
-        placeholder="Conferma Password"
-      />
-    </div>
-    <div>
-      <button type="submit">Registrati</button>
+    <div class="h-full w-full flex flex-col p-4">
+      <h2>Registrati</h2>
+      <p>Oppure <a href="/Auth/Login" class="underline">fai il login</a></p>
+      <div>
+        <label for="name">
+          <span>Nome</span>
+        </label>
+        <input type="text" name="name" placeholder="Username" />
+      </div>
+      <div>
+        <label for="email">
+          <span>E-mail</span>
+        </label>
+        <input type="text" name="email" placeholder="Email" />
+      </div>
+      <div>
+        <label for="password">
+          <span>Password</span>
+        </label>
+        <input type="password" name="password" placeholder="Password" />
+      </div>
+      <div>
+        <label for="passwordConfirm">
+          <span>Conferma Password</span>
+        </label>
+        <input
+          type="password"
+          name="passwordConfirm"
+          placeholder="Conferma Password"
+        />
+      </div>
+      <div>
+        <button type="submit">Registrati</button>
+      </div>
     </div>
   </form>
 </div>
 
 <style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  :global(body) {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
   .bodyAuth {
     width: 100%;
     height: 100vh;
@@ -48,7 +58,7 @@
   }
   form {
     height: 620px;
-    width: 400px;
+    width: 440px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
     transform: translate(-50%, -50%);
@@ -58,7 +68,6 @@
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 0px 35px;
   }
   form * {
     font-family: "Poppins", sans-serif;
@@ -121,11 +130,11 @@
   .shape:first-child {
     background: linear-gradient(#ff512f, #f09819);
     right: -70px;
-    top: -80px;
+    top: -110px;
   }
   .shape:last-child {
     background: linear-gradient(to left, #1845ad, #23a2f6);
     left: -60px;
-    bottom: -80px;
+    bottom: -110px;
   }
 </style>
