@@ -3,4 +3,19 @@
   console.log(schede);
 </script>
 
-ciao
+<table>
+  <thead>
+    <tr>
+      <td>Data Inizio</td>
+      <td>Data Scheda</td>
+      <td>Data Fine</td>
+    </tr>
+  </thead>
+  <tbody>
+    {#each schede as scheda}
+      <tr>
+        <td />
+      </tr>
+    {/each}
+  </tbody>
+</table>

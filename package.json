@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sendgrid/mail": "^7.7.0",
+		"dayjs": "^1.11.7",
 		"pocketbase": "^0.10.1",
 		"svelte-carousel": "^1.0.20"
 	}
