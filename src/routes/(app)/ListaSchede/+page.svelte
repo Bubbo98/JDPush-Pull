@@ -4,9 +4,9 @@
   export let data;
 </script>
 
-<body>
-  <div class="mt-20 items-center flex flex-col w-full mb-64">
-    <h2>Le mie schede</h2>
+<body class="w-screen h-screen">
+  <div class="mt-32 items-center h-full flex flex-col w-full mb-[25rem]">
+    <h2 class="mt-6">Le mie schede</h2>
     <Table schede={data.schede} />
   </div>
 </body>
@@ -14,6 +14,5 @@
 <style>
   body {
     position: relative;
-    top: 60px;
   }
 </style>

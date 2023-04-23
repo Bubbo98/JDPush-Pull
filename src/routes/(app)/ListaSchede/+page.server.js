@@ -1,6 +1,8 @@
 import { error, redirect } from "@sveltejs/kit";
 import {serializeNonPOJOs} from '$lib/utils'
 
+
+
 export const load = ({locals}) => {
     if (!locals.pb.authStore.isValid) {
         throw redirect(303, '/Auth/Login')
@@ -16,6 +18,7 @@ export const load = ({locals}) => {
             throw error(err.status, err.message)
         }
     }
+
     return {
         schede: getUsersSchede(locals.pb.authStore.baseModel.id)
     }
