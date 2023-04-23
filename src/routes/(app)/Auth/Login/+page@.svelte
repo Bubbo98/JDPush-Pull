@@ -32,13 +32,13 @@
         />
       </div>
       <div>
-        <a href="/ResetPassword">Hai dimenticato la password?</a>
+        <a href="/Auth/ResetPassword">Hai dimenticato la password?</a>
       </div>
       <div>
         <button type="submit">Login</button>
       </div>
       {#if form?.notVerified}
-        <div>Devi registrarti prima di fare il login</div>
+        <div>Devi verificare l'email prima di effettuare il login</div>
       {/if}
     </div>
   </form>
