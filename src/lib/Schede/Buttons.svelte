@@ -2,9 +2,10 @@
   import { products, indexCart, cart } from "$lib/Carrello/cartStore";
   import { get } from "svelte/store";
   import { page } from "$app/stores";
+  import { currentUser } from "$lib/Utils";
   const url = get(page);
   export let gender;
-
+  export let showAlert = false;
   if (url.route.id == "/(app)/Schede/SchedeGP" && gender == 1) {
     indexCart.update(() => {
       return [0];
@@ -58,15 +59,19 @@
   let prodotto = prodottiArray[get(indexCart)];
 
   function addToCart(n) {
-    for (let item of $cart) {
-      if (item.id === prodotto.id) {
-        prodotto.Q += n;
-        $cart = $cart;
-        return;
+    if ($currentUser) {
+      for (let item of $cart) {
+        if (item.id === prodotto.id) {
+          prodotto.Q += n;
+          $cart = $cart;
+          return;
+        }
       }
+      $cart = [...$cart, prodotto];
+      prodotto.Q = n;
+    } else {
+      showAlert = true;
     }
-    $cart = [...$cart, prodotto];
-    prodotto.Q = n;
   }
 </script>
 

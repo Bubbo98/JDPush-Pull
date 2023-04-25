@@ -1,6 +1,7 @@
 <script>
   import { ricetteShower, schedeShower } from "$lib/Store";
   import Buttons from "$lib/Schede/Buttons.svelte";
+  import AlertAuthenticated from "../../../lib/Schede/AlertAuthenticated.svelte";
 
   ricetteShower.update(() => {
     return "false";
@@ -8,6 +9,7 @@
   schedeShower.update(() => {
     return "false";
   });
+  let showAlert = false;
   let showUomo = false;
   let showDonna = false;
 
@@ -30,7 +32,7 @@
         }}>Uomo</button
       >
       {#if showUomo}
-        <Buttons gender="0" />
+        <Buttons gender="0" bind:showAlert />
       {/if}
     </div>
     <div class="container space-y-1">
@@ -40,10 +42,13 @@
         }}>Donna</button
       >
       {#if showDonna}
-        <Buttons gender="1" />
+        <Buttons gender="1" bind:showAlert />
       {/if}
     </div>
   </div>
+  {#if showAlert}
+    <AlertAuthenticated bind:showAlert />
+  {/if}
 </body>
 
 <style>

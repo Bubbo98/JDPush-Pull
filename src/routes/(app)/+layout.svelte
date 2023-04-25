@@ -4,12 +4,31 @@
   import Buttons from "$lib/Header/Buttons.svelte";
   import VanishingHeader from "$lib/Header/VanishingHeader.svelte";
   import "./global.css";
-  import { setContext } from "svelte";
+  import { onMount, setContext } from "svelte";
   import EmailForm from "$lib/Email/EmailForm.svelte";
+  import { cart } from "../../lib/Carrello/cartStore";
 
   /** @type {import('./$types').LayoutLoad} */
   export let data;
 
+  onMount(() => {
+    if ($cart.length == 0)
+      if (data.carrello.length > 0) {
+        if (data.carrello[0].prodotti.length > 0) {
+          for (let i = 0; i < data.carrello[0].prodotti.length; i++) {
+            let itemToAdd = {
+              price: data.carrello[0].prodotti[i].price,
+              title: data.carrello[0].prodotti[i].nome,
+              Q: data.carrello[0].prodotti[i].q,
+            };
+            console.log(i);
+            $cart.push(itemToAdd);
+          }
+        }
+      }
+  });
+
+  console.log(data);
   setContext("Logo", data.Logo);
   setContext("SchedeIcon", data.SchedeIcon);
   setContext("RicetteIcon", data.RicetteIcon);
@@ -91,7 +110,7 @@
       <Title />
     </div>
     <div class="flexSpaceAroundRow alignItemsCenter widthHeader fullHeight">
-      <Buttons />
+      <Buttons bind:carrello={data.carrello} />
     </div>
   </VanishingHeader>
 

@@ -7,9 +7,13 @@ export const actions = {
         const body = Object.fromEntries(await request.formData())
         
         let username = generateUsername(body.name.split(' ').join('')).toLowerCase()
-        
+        const cart = new FormData();
         try{
-            await locals.pb.collection('users').create({ username, ...body})
+            const result = await locals.pb.collection('users').create({ username, ...body})
+            console.log(result.id)
+            cart.append('user', result.id)
+            cart.append('prodotti', [])
+            await locals.pb.collection('carrello').create(cart)
             await locals.pb.collection('users').requestVerification(body.email);
         } catch (err) {
             console.log('Error: ', err);

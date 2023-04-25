@@ -24,7 +24,7 @@ export const nodes = [() => import('./nodes/0'),
 	() => import('./nodes/19'),
 	() => import('./nodes/20')];
 
-export const server_loads = [];
+export const server_loads = [2];
 
 export const dictionary = {
 	"/(app)": [4,[2]],

@@ -2,7 +2,9 @@
   import { cart } from "./cartStore.js";
   import { goto } from "$app/navigation";
   /** @type {import('./$types').LayoutLoad} */
-  import { getContext } from "svelte";
+  import { getContext, onMount } from "svelte";
+
+  export let carrello = [];
 
   let ArrowUp = getContext("ArrowUp");
   let ArrowDown = getContext("ArrowDown");
@@ -44,7 +46,7 @@
   }
 
   $: total = $cart.reduce((sum, item) => sum + item.price * item.Q, 0);
-  $: console.log($cart.length);
+  $: console.log($cart);
 </script>
 
 <div>

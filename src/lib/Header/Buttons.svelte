@@ -6,6 +6,8 @@
   /** @type {import('./$types').LayoutLoad} */
   import { getContext } from "svelte";
 
+  export let carrello = [];
+
   let UserIMG = getContext("UserIMG");
   let CartIMG = getContext("CartIMG");
 
@@ -31,11 +33,11 @@
 
 {#if !$cart}
   <div class="hide">
-    <Carrello />
+    <Carrello bind:carrello />
   </div>
 {:else}
   <div class="show absolute py-4 px-2 fullHeightVH backgroundButtonH">
-    <Carrello />
+    <Carrello bind:carrello />
   </div>
 {/if}
 

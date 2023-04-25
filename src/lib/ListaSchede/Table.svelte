@@ -2,7 +2,6 @@
   import dayjs from "dayjs";
   import { getUrl } from "$lib/utils";
   export let schede = [];
-  console.log(schede);
 </script>
 
 <div class="w-full h-full my-4 rounded-xl max-h-[450px] flex justify-center">
